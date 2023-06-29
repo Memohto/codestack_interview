@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CodeStack Interview</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./main.js"></script> 
+  </head>
+  <body>
+    <div class="input-group mb-2">
+      <button id="filter-dropdown" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">id</button>
+      <ul id="header-list" class="dropdown-menu"></ul>
+      <input id="search-input" class="form-control" type="text">
+      <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
+    </div>
+    <table id="user-table" class="table table-striped">
+      <thead id="user-table-head"></thead>
+      <tbody id="user-table-body"></tbody>
+    </table>
+    <div class="row">
+      <div class="col">
+        <label>Items per page:</label>
+        <select id="perPage-select" onchange="perPageChange()">
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <button onclick="prevPage()"> < </button>
+        <span id="page-number">&nbsp;1&nbsp;</span>
+        <button onclick="nextPage()"> > </button>
+      </div>
+    </div>
+    
+  </body>
+</html>
